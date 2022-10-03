@@ -1,0 +1,50 @@
+Para instalar usar o migrations, precisa instalar o sequelize-cli, que fica dentro da pasta node_nomules/.bin
+Para isso, escreva npx sequelize-cli init
+
+Modulos para instalar antes:
+    npm i express sequelize pg
+
+Comando:
+    npx sequelize-cli init
+
+Com esse comando, ele vai criar automaticamente as pastas: config, migrations, models e seeders
+
+------------------------------------------------
+
+Para criar um banco de dados (usará os dados do config)
+    npx sequelize-cli db:create
+
+
+Para criar um modelo do banco:
+    nome: Vehicle com as colunas brand, model e id.
+    npx sequelize-cli model:generate --name Vehicle --attributes brand:string,model:string,id:string
+
+    ele vai criar 4 colunas: id, brand, model, id, createdAt e updateAt
+    cria um arquivo na pasta models e outro na pasta migrations
+
+
+Para migrar essas criações para o banco de dados:
+    npx sequelize-cli db:migrate
+
+Para desfazer uma migração:
+    npx sequelize-cli db:migrate:undo                     - só reverte a ultima migração
+    npx sequelize-cli db:migrate:undo:all                 - reverte todas
+    npx sequelize-cli db:migrate:undo --to NomeMigração   - reverte a migração NomeMigração
+
+
+Para verificar o status das migrações
+    npx sequelize-cli db:migrate:status
+
+    up -> significa que já está migrado
+    down -> necessita migração
+
+
+Adicionar dados nas tabelas
+    Arquivo default:     npx sequelize-cli seed:generate --name demo-user
+    para executar:       npx sequelize-cli db:seed:all
+    para desfazer:       npx sequelize-cli db:seed:undo
+
+
+
+
+

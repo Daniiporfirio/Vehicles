@@ -1,0 +1,17 @@
+Criar um serviço para cadastrar veiculos
+
+Requisitos funcionais:
+- Cadastrar um veiculo
+- Buscar um veiculo por ID
+- Buscar um veiculo por Nome
+- Atualizar os dados de um veiculo
+- Excluir um veiculo
+
+Banco de dados:
+- Usar qualquer banco de dados
+- Definir um modelo de banco
+- Criar com o sistema de migrations do sequelize
+- Toda a integração com o banco deve ser via sequelize
+
+Projeto
+- Criar um README, explicando como subir o Projeto
